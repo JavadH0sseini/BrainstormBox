@@ -8,14 +8,21 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
-    fontFamily: {},
+    fontFamily: {
+      outfit: ["Outfit", "sans-serif"],
+      Lilita: ["Lilita One", "cursive"],
+    },
     extend: {
       spacing: {},
       borderRadius: {},
+      boxShadow: {
+        btn: "1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px",
+        btnh: "1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px, 6px 6px 0px 0px, 7px 7px 0px 0px",
+      },
       colors: {
         primary: "#ffffff",
-        secondary:"#ffffff", 
-        accent:"#ffffff", 
+        secondary: "#ffffff",
+        accent: "#ffffff",
       },
     },
   },

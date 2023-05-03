@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply font-outfit relative cursor-pointer text-4xl font-bold py-6 px-16 border-[3px] border-black  block mx-auto overflow-hidden shadow-btn hover:shadow-btnh transition hover:translate-x-[-2px] hover:translate-y-[-2px] focus-within:outline-none active:shadow-none active:translate-x-[5px] active:translate-y-[5px] ;
+  }
+
+  .btn-effect{
+    @apply before:content-[''] before:transition before:scale-x-0 before:hover:scale-x-125 before:rotate-[-30deg] before:h-[400%] before:origin-left before:z-[-10] before:top-0 before:left-0 before:bottom-0 before:right-0 before:absolute before:bg-black; 
+  }
+
+  .inp {
+    @apply active:outline-none focus-within:outline-none border-[3px] rounded py-2 px-3 border-black;
+  }
+}
