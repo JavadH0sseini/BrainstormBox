@@ -11,7 +11,7 @@ export default function AddModal({ closeModal }) {
   useOutsideHandler(modalRef, clikedOut, clikedIn);
 
   return (
-    <div className="bg-[#0008] flex justify-center items-center fixed top-0 h-[100vh] w-full font-outfit">
+    <div className="bg-[#000a] flex justify-center items-center fixed top-0 h-[100vh] w-full font-outfit">
       <form
         ref={modalRef}
         className="bg-white rounded gap-2 w-[600px] flex flex-col p-6"
@@ -38,7 +38,7 @@ export default function AddModal({ closeModal }) {
         ></textarea>
         <button
           type="submit"
-          className="btn btn-effect shadow-red-500 hover:shadow-red-500 hover:text-white after:bg-black"
+          className="btn btn-effect hover:text-white before:bg-red-500 shadow-red-500 hover:shadow-black"
           onClick={(e) => {
             e.preventDefault();
           }}
