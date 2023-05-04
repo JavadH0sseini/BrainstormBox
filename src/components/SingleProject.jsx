@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function SingleProject() {
+export default function SingleProject({title, description}) {
   return (
-    <div>
-        <h2>title</h2>
-        <p>description</p>
+    <div className='font-outfit py-5 px-10 flex flex-col gap-2 bg-orange-200 rounded'>
+        <h2 className='font-bold text-xl'>{title}</h2>
+        <p className='font-medium text-lg'>{description}</p>
     </div>
   )
 }
