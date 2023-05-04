@@ -1,11 +1,9 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ProjectsContext = createContext({
   projects: [],
   addProject: () => {},
 });
-
-
 
 const ProjectsProvider = ({ children }) => {
   const [projects, setProject] = useState([
@@ -16,12 +14,29 @@ const ProjectsProvider = ({ children }) => {
     },
   ]);
 
+  useEffect(() => {
+    const savedNotes = JSON.parse(
+      localStorage.getItem("react-project-app-data")
+    );
+
+    if (savedNotes) {
+      setProject(savedNotes);
+    }
+    console.log(savedNotes);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("react-project-app-data", JSON.stringify(projects));
+  }, [projects]);
+
   const addProject = (newProject) => {
     setProject([...projects, newProject]);
   };
 
   return (
-    <ProjectsContext.Provider value={{projects:projects, addProject:addProject}}>
+    <ProjectsContext.Provider
+      value={{ projects: projects, addProject: addProject }}
+    >
       {children}
     </ProjectsContext.Provider>
   );
